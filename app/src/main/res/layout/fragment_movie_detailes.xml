@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/movieDetailesFragment"
+    tools:context=".MovieDetailesFragment">
+
+    <TextView
+        android:id="@+id/detailes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="THIS IS AN OSM MOVIE"
+        android:textSize="45dp"
+        android:gravity="center"
+        android:fontFamily="@font/cucho"/>
+
+    <Button
+        android:id="@+id/homebutton"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:drawableTop="@drawable/home"
+        android:layout_marginTop="90dp"
+        android:layout_gravity="center"/>
+
+</FrameLayout>
+</layout>
