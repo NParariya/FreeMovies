@@ -12,7 +12,7 @@ data class MovieData(
     @SerializedName("breed_group")
     var group: String,
     @SerializedName("url")
-    var url: String?
+    var url: String?,
 
 
    /* @SerializedName("backdrop_path")

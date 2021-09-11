@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.freemovies.model.MovieData
 
-class MovieAdapter(private var movieList : ArrayList<MovieData>,private val clickListener: (MovieData)->Unit) :RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
+class MovieAdapter(private var movieList : List<MovieData>,private val clickListener: (MovieData)->Unit) :RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
 
     private var dataSet: MutableList<MovieData> = mutableListOf()
 

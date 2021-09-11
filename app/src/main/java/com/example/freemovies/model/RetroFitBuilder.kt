@@ -11,7 +11,7 @@ object RetroFitBuilder {
     private const val BASE_URL = "https://raw.githubusercontent.com/"
 
 
-   /* private const val BASE_URL = "https://api.themoviedb.org/3/"*/
+   //private const val BASE_URL = "https://api.themoviedb.org/"
 
     private fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
