@@ -15,13 +15,5 @@ data class MovieData(
     var url: String?,
 
 
-   /* @SerializedName("backdrop_path")
-    val url : String,
-    @SerializedName("title")
-    var name: String,
-
-    val belongs_to_collection: Any,
-    val budget: Int,
-    val genres: List<Genre>,*/
 
     ):Serializable
