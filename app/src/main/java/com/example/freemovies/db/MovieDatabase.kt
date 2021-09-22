@@ -12,7 +12,6 @@ abstract class MovieDatabase:RoomDatabase() {
     abstract fun getMovieDataDao():MovieDataDao
 
     companion object{
-
         @Volatile
         private var INSTANCE: MovieDatabase? = null
 
