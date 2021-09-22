@@ -1,4 +1,4 @@
-package com.example.freemovies.model
+package com.example.freemovies.network
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -8,10 +8,10 @@ import java.util.concurrent.TimeUnit
 object RetroFitBuilder {
 //const modifier error
 
-    private const val BASE_URL = "https://raw.githubusercontent.com/"
+  //  private const val BASE_URL = "https://raw.githubusercontent.com/"
 
 
-   //private const val BASE_URL = "https://api.themoviedb.org/"
+  private const val BASE_URL = "https://api.themoviedb.org"
 
     private fun getRetrofit(): Retrofit {
         return Retrofit.Builder()

@@ -2,7 +2,7 @@ package com.example.freemovies.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.freemovies.model.RetroFitBuilder
+import com.example.freemovies.network.RetroFitBuilder
 import com.example.freemovies.repository.MainRepoImpl
 
 class ViewModelFactory () : ViewModelProvider.Factory {

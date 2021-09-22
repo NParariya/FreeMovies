@@ -1,17 +1,12 @@
-package com.example.freemovies
+package com.example.freemovies.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.widget.Toast
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.freemovies.model.MovieData
+import com.example.freemovies.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -26,7 +21,11 @@ class MainActivity : AppCompatActivity() {
 
        val  navController = navHostFragment?.findNavController()
 
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment,R.id.favoriteFragment,R.id.userFragment))
+        val appBarConfiguration = AppBarConfiguration(setOf(
+            R.id.homeFragment,
+            R.id.favoriteFragment,
+            R.id.userFragment
+        ))
         if (navController != null) {
             setupActionBarWithNavController(navController, appBarConfiguration)
 

@@ -1,9 +1,11 @@
 package com.example.freemovies.model
 
 
+import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
-data class Result(
+@Keep
+data class Movies(
     @SerializedName("adult")
     val adult: Boolean,
     @SerializedName("backdrop_path")

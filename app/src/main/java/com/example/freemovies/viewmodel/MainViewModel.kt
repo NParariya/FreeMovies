@@ -5,8 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.freemovies.model.MovieData
+import com.example.freemovies.model.Movies
+import com.example.freemovies.repository.FavmovieRepoImpl
 import com.example.freemovies.repository.MainRepo
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -16,14 +17,13 @@ import kotlin.coroutines.CoroutineContext
 
 class MainViewModel(private val repo: MainRepo) : ViewModel() {
 
-
-    private val _userList = MutableStateFlow<List<MovieData>?>(emptyList())
-
+/**changed*/
+    /*private val _userList = MutableStateFlow<List<MovieData>?>(emptyList())
     val userList: StateFlow<List<MovieData>?> = _userList
 
-    fun refresh(){
-        getMovieFromServer()
-    }
+  fun refresh(){
+      getMovieFromServer()
+  }
 
 
 
@@ -32,4 +32,17 @@ class MainViewModel(private val repo: MainRepo) : ViewModel() {
             _userList.value = repo.getMovie()
         }
     }
+*/
+
+
+    private val _userList : MutableLiveData<MovieData> = MutableLiveData()
+    val userList : LiveData<MovieData> = _userList
+
+    init {
+        viewModelScope.launch {
+            _userList.value = repo.getMovie()
+        }
+    }
+
+
 }
